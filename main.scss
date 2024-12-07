@@ -59,6 +59,75 @@ img {
   max-height: 200vh;
 }
 
+.primary-title {
+  font-size: 4.5rem;
+  font-weight: 500;
+  letter-spacing: -3px;
+  line-height: 85px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.center-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  text-align: center;
+
+  .sub-title {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 10px;
+  }
+}
+
+.line-v {
+  height: 80px;
+  width: 2px;
+  background-color: var(--black-color);
+  margin-block: 80px;
+}
+
+.content-title {
+  .primary-title {
+    font-size: 7rem;
+    line-height: 85px;
+    overflow: hidden;
+
+    span {
+      display: block;
+    }
+  }
+
+  .sub-title {
+    overflow: hidden;
+
+    span {
+      display: block;
+    }
+  }
+
+  .secondary-title {
+    font-size: 4.5rem;
+    line-height: 55px;
+  }
+}
+
+.primary-btn {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  padding: 16px 24px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+  cursor: pointer;
+  margin-top: 5rem;
+}
+
 
 /*
 ================================================
@@ -123,5 +192,106 @@ img {
 
 } /*  header */
 
- 
- 
+/*
+================================================
+   Hero Section 
+================================================
+*/
+
+#hero-section {
+  height: 92vh;
+
+  .content-title {
+    position: relative;
+    z-index: 1;
+    color: var(--black-color);
+    text-align: center;
+  }
+}
+
+/*
+================================================
+   Image Style 
+================================================
+*/
+
+#image-section {
+  padding-block: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #f5aaf4 0%, #fb89a3 100%);
+
+  .overlay {
+    position: relative;
+    z-index: 2;
+    width: 60vw;
+    height: 750px;
+    background-image: url('../assets/img1.jpg');
+    border-radius: 30px;
+    background-color: #ff4400;
+    background-size: cover;
+  }
+}
+
+/*
+================================================
+   Work Style 
+================================================
+*/
+
+#work-section {
+  height: 82vh;
+  justify-content: initial;
+  background: linear-gradient(180deg, #fb89ae 0%, #f2f3f5 60%);
+
+  .client {
+    margin-top: 4rem;
+  }
+
+}
+
+/*
+================================================
+   Brand Style 
+================================================
+*/
+
+#brand {
+  
+    .logos {
+    overflow: hidden;
+    padding: 15rem 0px;
+    background: #f2f3f5;
+    white-space: nowrap;
+    position: relative;
+
+    &::before, &::after {
+      position: absolute;
+      top: 0;
+      width: 250px;
+      height: 100%;
+      content: "";
+      z-index: 2;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to left, rgba(255,255,255,0), #f2f3f5);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to right, rgba(255,255,255,0), #f2f3f5);
+    }
+    &.slide {
+      display: inline-block;
+      animation: 35s slide infinite linear;
+
+      img {
+        height: 50px;
+        margin: 0px 40px;
+      }
+    }
+  }
+}
