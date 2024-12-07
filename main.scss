@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --gray-color: #000080;
+
+  --primary-gradient: linear-gradient(to bottom, #f2e1f6 0%, #f6b0f9 100%);
+  --secondary-gradient: linear-gradient(to right, #ff9a9e 0%, #fad0c4 100%);
+
+  /*  Fonts */
+  --font-family: 'Intel Tight', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--black-color);
+  background-color: #f2f3f5;
+  overflow-x: hidden;
+}
+
+/*
+================================================
+   Global Style
+================================================
+*/
+.inline-padding {
+  padding-inline: 120px;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+/*
+================================================
+   Button and Title Style 
+================================================
+*/
+.o-container {
+  background: linear-gradient(to bottom, #f2f3f5 5%,#f6b0f9 30%, #f6abf5 50% );
+  max-height: 200vh;
+}
+
+
+/*
+================================================
+   Header Style 
+================================================
+*/
+#header {
+  padding-block: 20px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .scroll-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+
+    li {
+      list-style: none;
+       & > a {
+        color: var(--gray-color);
+
+        &.active {
+          color: var(--black-color);
+        }
+       }
+
+      &:hover > a {
+        color: var(--black-color);
+      }
+    }
+  }
+
+  /*  hamburger-menu mobile viewport */
+  .hamburger-menu {
+    // display: flex;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    position: relative;
+    z-index: 100;
+
+    & > span {
+      width: 30px;
+      height: 3px;
+      background-color: var(--black-color);
+      transition: all 0.3s;
+    }
+  }
+
+} /*  header */
+
+ 
+ 
